@@ -14,7 +14,8 @@ const OPEN_WEATHER_MAP_URL = 'http://api.openweathermap.org/data/2.5/weather?uni
          return res.data.main.temp;
        }
      }, function(res){
-       throw new Error(res.data.message);
+       // throw new Error(res.data.message);
+       throw new Error('Unable to fetch weather for that location.');
      });
    }
  }
